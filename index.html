@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TODO app</title>
+    <link rel="stylesheet" href="./assets/styles/normalize.css">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+</head>
+<body>
+<header>
+    <div class="header-wrapper content-wrapper">
+        <img class="logo" src="./assets/images/logo.png" alt="SENLA logotype">
+        <div class="search-wrapper">
+            <img class="search-icon" src="./assets/images/icons/search-icon.svg" alt="search icon">
+            <input class="search" type="search" placeholder="Search task for to do">
+        </div>
+    </div>
+</header>
+<main>
+    <div class="todo-app-content content-wrapper">
+        <div class="tabs-navigation">
+            <button class="button tab-selector active-tab">All</button>
+            <button class="button tab-selector">Active</button>
+            <button class="button tab-selector">Done</button>
+        </div>
+
+        <section class="new-task-wrapper">
+            <label class="new-task-label" for="new-task">New Task</label>
+            <textarea class="new-task-input" type="text" id="new-task"></textarea>
+            <button class="button add-new-task-button">ADD</button>
+        </section>
+
+        <ul class="todo-list">
+            <li class="todo-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, illo!</li>
+            <li class="todo-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci error facere, harum
+                neque nisi quos recusandae sed sint soluta vel!
+            </li>
+            <li class="todo-item clicked">Lorem ipsum dolor sit amet.
+                <button class="button  important-button mark-important-button">MARK IMPORTANT</button>
+                <button class="button delete-button">
+                    <img src="./assets/images/icons/delete-icon.svg" alt="delete-icon">
+                </button>
+            </li>
+            <li class="todo-item">Lorem ipsum dolor.
+                <button class="button important-button not-important-button">NOT IMPORTANT</button>
+                <button class="button delete-button">
+                    <img src="./assets/images/icons/delete-icon.svg" alt="delete-icon">
+                </button>
+            </li>
+            <li class="todo-item">Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+        </ul>
+    </div>
+</main>
+</body>
+</html>

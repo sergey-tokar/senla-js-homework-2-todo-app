@@ -96,6 +96,11 @@ body {
     outline: none;
     cursor: pointer;
     border: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.button:active {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.14), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 1px 5px rgba(0, 0, 0, 0.2);
 }
 
 .tab-selector {
@@ -105,6 +110,11 @@ body {
     font-weight: 900;
     color: #53565A;
     opacity: 50%;
+    box-shadow: none;
+}
+
+.tab-selector:active {
+    box-shadow: none;
 }
 
 .active-tab {
@@ -140,15 +150,22 @@ body {
     margin-left: auto;
     background-color: #2F80ED;
     color: white;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 500;
     letter-spacing: 1px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.add-new-task-button:hover {
+    background-color: #579ff3;
+}
+
+.add-new-task-button:active {
+    background-color: #2F80ED;
 }
 
 .todo-list {
     padding: 6px 0 0 0;
-    margin: 0 0 0 40px;
+    margin: 0 0 67px 40px;
     width: 763px;
     list-style: none;
 }
@@ -180,7 +197,6 @@ body {
     font-size: 14px;
     line-height: 16px;
     font-weight: 500;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
     color: white;
 }
 
@@ -188,7 +204,23 @@ body {
     background-color: #27AE60;
 }
 
+.mark-important-button:hover {
+    background-color: #6ac689;
+}
+
+.mark-important-button:active {
+    background-color: #27AE60;
+}
+
 .not-important-button {
+    background-color: #BDBDBD;
+}
+
+.not-important-button:hover {
+    background-color: #aaaaaa;
+}
+
+.not-important-button:active {
     background-color: #BDBDBD;
 }
 
@@ -199,5 +231,13 @@ body {
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    background-color: rgba(196, 196, 196, 0.5);
 }
 
+.delete-button:hover {
+    background-color: #d7d6d6;
+}
+
+.delete-button:active {
+    background-color: rgba(196, 196, 196, 0.5);
+}

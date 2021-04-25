@@ -182,9 +182,60 @@ body {
     box-sizing: border-box;
 }
 
+.todo-item .button {
+    display: none;
+}
+
+.todo-item.clicked .delete-button,
+.todo-item.clicked .done-button {
+    display: inline-block;
+}
+
+.todo-item.important.clicked .not-important-button {
+    display: inline-block;
+}
+
+.todo-item.clicked .mark-important-button {
+    display: inline-block;
+}
+
+.todo-item.clicked.done .not-important-button,
+.todo-item.clicked.done .mark-important-button
+{
+    display: none;
+}
+
 .clicked {
     border: 1px solid rgba(47, 128, 237, 0.5);
     box-shadow: 0px 6px 20px rgba(47, 128, 237, 0.7);
+}
+
+.delete-button,
+.done-button {
+    position: absolute;
+    top: 10%;
+    right: 1%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(196, 196, 196, 0.5);
+    background-image: url('../images/icons/delete-icon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.delete-button:hover {
+    background-color: #d7d6d6;
+}
+
+.delete-button:active {
+    background-color: rgba(196, 196, 196, 0.5);
+}
+
+.done-button {
+    top: 55%;
+    color: white;
+    background-image: none;
 }
 
 .important-button {
@@ -200,44 +251,52 @@ body {
     color: white;
 }
 
-.mark-important-button {
+.mark-important-button,
+.done-button {
     background-color: #27AE60;
 }
 
-.mark-important-button:hover {
+.mark-important-button:hover,
+.done-button:hover {
     background-color: #6ac689;
 }
 
-.mark-important-button:active {
+.mark-important-button:active,
+.done-button:active {
     background-color: #27AE60;
 }
 
-.not-important-button {
+.not-important-button,
+.done .done-button {
     background-color: #BDBDBD;
 }
 
-.not-important-button:hover {
+.not-important-button:hover,
+.done .done-button:hover {
     background-color: #aaaaaa;
 }
 
-.not-important-button:active {
+.not-important-button:active,
+.done .done-button:active {
     background-color: #BDBDBD;
 }
 
-.delete-button {
-    position: absolute;
-    top: 10%;
-    right: 1%;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: rgba(196, 196, 196, 0.5);
+.important {
+    font-weight: 700;
+    line-height: 20px;
 }
 
-.delete-button:hover {
-    background-color: #d7d6d6;
+.important::before {
+    content: '\2606   ';
+    vertical-align: middle;
+    font-size: 22px;
 }
 
-.delete-button:active {
-    background-color: rgba(196, 196, 196, 0.5);
+.done,
+.done .done-button {
+    text-decoration: line-through;
+}
+
+.hide {
+    display: none;
 }

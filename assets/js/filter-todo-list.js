@@ -1,3 +1,5 @@
+import searchTodoItem from "./search-todo-item.js";
+
 function clearTodoItemsFilter() {
     const todoList = document.querySelectorAll('.todo-item');
     todoList.forEach(todoItem => todoItem.classList.remove('hide'));
@@ -23,7 +25,7 @@ export function showActiveTodo(event) {
         if (todoItem.classList.contains('done')) {
             todoItem.classList.add('hide');
         }
-    })
+    });
 }
 
 export function showDoneTodo(event) {

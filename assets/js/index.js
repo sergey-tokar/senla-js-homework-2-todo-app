@@ -1,7 +1,13 @@
 import addNewTodo from "./add-new-todo.js";
 import clickTodoItem from "./click-todo-item.js";
-
-localStorage.setItem('todoList', JSON.stringify([]));
+import {showAllTodo} from "./filter-todo-list.js";
+import {showActiveTodo} from "./filter-todo-list.js";
+import {showDoneTodo} from "./filter-todo-list.js";
+import init from "./init.js";
 
 document.querySelector('.add-new-task-button').addEventListener('click', addNewTodo);
-document.body.addEventListener('click', clickTodoItem, false);
+document.body.addEventListener('click', clickTodoItem);
+document.querySelector('.tab-selector-all').addEventListener('click', showAllTodo);
+document.querySelector('.tab-selector-active').addEventListener('click', showActiveTodo);
+document.querySelector('.tab-selector-done').addEventListener('click', showDoneTodo);
+init();

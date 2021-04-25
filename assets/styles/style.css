@@ -195,8 +195,14 @@ body {
     display: inline-block;
 }
 
-.todo-item.clicked.not-important .mark-important-button {
+.todo-item.clicked .mark-important-button {
     display: inline-block;
+}
+
+.todo-item.clicked.done .not-important-button,
+.todo-item.clicked.done .mark-important-button
+{
+    display: none;
 }
 
 .clicked {
@@ -289,4 +295,8 @@ body {
 .done,
 .done .done-button {
     text-decoration: line-through;
+}
+
+.hide {
+    display: none;
 }

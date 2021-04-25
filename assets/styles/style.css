@@ -75,6 +75,7 @@ body {
 }
 
 .todo-app-content {
+    min-height: 830px;
     background-image: url('../images/man-taking-notes.png');
     background-repeat: no-repeat;
     background-position-x: right;

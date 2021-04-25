@@ -182,9 +182,54 @@ body {
     box-sizing: border-box;
 }
 
+.todo-item .button {
+    display: none;
+}
+
+.todo-item.clicked .delete-button,
+.todo-item.clicked .done-button{
+    display: inline-block;
+}
+
+.todo-item.important.clicked .not-important-button {
+    display: inline-block;
+}
+
+.todo-item.clicked.not-important .mark-important-button {
+    display: inline-block;
+}
+
 .clicked {
     border: 1px solid rgba(47, 128, 237, 0.5);
     box-shadow: 0px 6px 20px rgba(47, 128, 237, 0.7);
+}
+
+.delete-button,
+.done-button {
+    position: absolute;
+    top: 10%;
+    right: 1%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(196, 196, 196, 0.5);
+    background-image: url('../images/icons/delete-icon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.delete-button:hover {
+    background-color: #d7d6d6;
+}
+
+.delete-button:active {
+    background-color: rgba(196, 196, 196, 0.5);
+}
+
+.done-button {
+    top: 55%;
+    color: white;
+    background-image: none;
 }
 
 .important-button {
@@ -200,15 +245,18 @@ body {
     color: white;
 }
 
-.mark-important-button {
+.mark-important-button,
+.done-button {
     background-color: #27AE60;
 }
 
-.mark-important-button:hover {
+.mark-important-button:hover,
+.done-button:hover {
     background-color: #6ac689;
 }
 
-.mark-important-button:active {
+.mark-important-button:active,
+.done-button:active {
     background-color: #27AE60;
 }
 
@@ -224,20 +272,7 @@ body {
     background-color: #BDBDBD;
 }
 
-.delete-button {
-    position: absolute;
-    top: 10%;
-    right: 1%;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: rgba(196, 196, 196, 0.5);
-}
 
-.delete-button:hover {
-    background-color: #d7d6d6;
-}
-
-.delete-button:active {
-    background-color: rgba(196, 196, 196, 0.5);
+.important-to-do {
+    font-weight: 700;
 }

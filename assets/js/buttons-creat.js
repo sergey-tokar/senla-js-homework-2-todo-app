@@ -1,3 +1,7 @@
+import changeImportant from "./change-important.js";
+import changeDone from "./change-done.js";
+import deleteTodo from "./delete-todo.js";
+
 export default function buttonsCreat(newTodoItem) {
     let buttonImportant = document.createElement('button');
     buttonImportant.classList.add('button', 'important-button', 'mark-important-button');
@@ -18,4 +22,10 @@ export default function buttonsCreat(newTodoItem) {
     newTodoItem.appendChild(buttonNotImportant);
     newTodoItem.appendChild(buttonDelete);
     newTodoItem.appendChild(buttonDone);
+
+    buttonImportant.addEventListener('click', changeImportant);
+    buttonNotImportant.addEventListener('click', changeImportant);
+    buttonDelete.addEventListener('click', deleteTodo);
+    buttonDone.addEventListener('click', changeDone);
+
 }

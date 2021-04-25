@@ -1,4 +1,5 @@
  export default function clickTodoItem(event) {
+
     if (event.target.classList.contains('todo-item')) {
         document.querySelectorAll('.todo-item').forEach(element => {
             if (element == event.target) {
